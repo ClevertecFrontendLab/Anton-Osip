@@ -1,0 +1,65 @@
+.contentCard {
+    max-width: 752px;
+    width: 100%;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    background: var(--character-light-primary-inverse);
+    border-radius: 2px;
+    padding: 28px 24px 24px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--primary-light-9);
+}
+#cards .contentCard__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--character-light-title-85);
+    margin-bottom: 0;
+    word-spacing: 4px;
+}
+#cards .contentCards__wrapper {
+    flex-wrap: nowrap;
+    max-width: calc(752px - 16px - 16px);
+    width: 100%;
+    margin-top: 16px;
+    gap: 16px;
+    margin-bottom: 180px;
+}
+#cards .contentCards__wrapper .contentCard {
+    padding: 0;
+}
+#cards .contentCardAction__title {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--character-light-title-85);
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin: 0;
+    padding: 12px 0;
+}
+#cards .contentCardAction__line {
+    margin: 0;
+}
+#cards .contentCardAction__link {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 17px 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--primary-light-6);
+}
+#cards .contentCardAction__icon {
+    margin-right: 13px;
+}
+#cards .contentCardAction__icon.contentCardAction__icon_Idcard path {
+    stroke: var(--primary-light-6);
+}
+#cards .contentCardAction__icon.contentCardAction__icon_calendar path {
+    fill: var(--primary-light-6);
+}

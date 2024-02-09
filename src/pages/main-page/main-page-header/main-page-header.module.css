@@ -26,11 +26,12 @@
     justify-content: space-between;
 }
 #header .header__settings {
+    display: flex;
+    align-items: center;
+    gap: 9px;
     position: absolute;
-    top: -7px;
-    right: 0;
-}
-#header .header__settings span {
+    top: 1px;
+    right: 17px;
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 15px;

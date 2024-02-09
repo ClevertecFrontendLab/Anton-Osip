@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './main-page-header.module.css';
 import { Header } from 'antd/lib/layout/layout';
-import { Row, Col, Breadcrumb, Button } from 'antd';
+import { Row, Col, Breadcrumb } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import { SettingOutlined } from '@ant-design/icons';
+import { Link } from 'react-router-dom';
 
-export const MainPageContent: React.FC = () => {
+export const MainPageHeader: React.FC = () => {
     return (
         <Header id={styles.header}>
             <Row>
@@ -23,13 +24,10 @@ export const MainPageContent: React.FC = () => {
                     </Title>
                 </Col>
                 <Col span={3} offset={2}>
-                    <Button
-                        className={styles.header__settings}
-                        icon={<SettingOutlined size={14} />}
-                        type='text'
-                    >
+                    <Link to='#' className={styles.header__settings}>
+                        <SettingOutlined size={14} />
                         Настройки
-                    </Button>
+                    </Link>
                 </Col>
             </Row>
         </Header>
