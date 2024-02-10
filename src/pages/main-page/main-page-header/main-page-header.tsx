@@ -17,13 +17,13 @@ export const MainPageHeader: React.FC = () => {
                 </Col>
             </Row>
             <Row className={styles.header__row}>
-                <Col span={18}>
+                <Col span={19}>
                     <Title className={styles.header__title}>
                         Приветствуем тебя в CleverFit — приложении, которое поможет тебе добиться
                         своей мечты!
                     </Title>
                 </Col>
-                <Col span={3} offset={2}>
+                <Col span={3} offset={1}>
                     <Link to='#' className={styles.header__settings}>
                         <SettingOutlined size={14} />
                         Настройки

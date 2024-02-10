@@ -1,0 +1,78 @@
+#sider {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    background: var(--character-light-primary-inverse);
+    padding-top: 45px;
+    height: auto;
+}
+#sider > div {
+    display: flex;
+    flex-direction: column;
+}
+.sider__logo {
+    margin-bottom: 60px;
+}
+
+.sider__logo_max {
+    height: 33px;
+    padding-left: 30px;
+}
+.sider__logo_min {
+    height: 33px;
+    padding-left: 16px;
+}
+#sider__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#sider__menu .sider__menuItem {
+    padding: 12px 0;
+    padding-left: 17px !important;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--character-light-title-85);
+    letter-spacing: 1px;
+}
+#sider__menu .sider__menuItem_collapsed {
+    padding-left: 24px !important;
+}
+#sider__menu .sider__menuItem svg path {
+    fill: var(--primary-light-9);
+}
+#sider__unfold {
+    margin-top: auto;
+}
+#sider__unfold .sider__divider {
+    margin: 0;
+}
+.sider__exiteWrapper {
+    padding: 9px 16px;
+    height: 40px;
+}
+.sider__exiteWrapper span {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--character-light-title-85);
+    margin-left: 25px;
+    letter-spacing: 1px;
+}
+
+.sider__rightUnfold {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -19px;
+    border-bottom: 12px solid transparent;
+    border-left: 30px solid #fff;
+    border-top: 12px solid transparent;
+    height: 72px;
+    width: 0;
+}
+.sider__rightUnfold > span {
+    position: absolute;
+    top: 17px;
+    left: -17px;
+}

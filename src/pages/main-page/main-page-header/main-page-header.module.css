@@ -17,9 +17,10 @@
     font-weight: 700;
     font-size: 38px;
     line-height: 130%;
-    word-spacing: 2px;
+    letter-spacing: 1px;
     color: var(--character-light-title-85);
     margin: 0;
+    word-spacing: -4px;
 }
 #header .header__row {
     position: relative;

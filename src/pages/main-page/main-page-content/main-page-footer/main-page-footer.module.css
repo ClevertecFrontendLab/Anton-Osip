@@ -3,7 +3,7 @@
 }
 #reviews .reviews__link {
     display: inline-block;
-    word-spacing: 5px;
+    letter-spacing: 1px;
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
