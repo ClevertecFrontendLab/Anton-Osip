@@ -14,9 +14,17 @@ import Logo from '../../../assets/logo.svg';
 import LogoMin from '../../../assets/logo_min.svg';
 import exiteIcon from '../../../assets/exitIcon.svg';
 
+interface IUseStateSider {
+    width: number;
+    collapsedWidth: number;
+}
+
 export const MainPageSider: React.FC = () => {
-    const [collapsed, setCollapsed] = useState(false);
-    const [sider, setSider] = useState({ width: 208, collapsedWidth: 64 });
+    const [collapsed, setCollapsed] = useState<boolean>(false);
+    const [sider, setSider] = useState<IUseStateSider>({
+        width: 208,
+        collapsedWidth: 64,
+    });
     return (
         <Sider
             collapsedWidth={sider.collapsedWidth}
