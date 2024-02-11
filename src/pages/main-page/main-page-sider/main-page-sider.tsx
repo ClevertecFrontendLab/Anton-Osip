@@ -16,14 +16,23 @@ import exiteIcon from '../../../assets/exitIcon.svg';
 
 export const MainPageSider: React.FC = () => {
     const [collapsed, setCollapsed] = useState(false);
+    const [sider, setSider] = useState({ width: 208, collapsedWidth: 64 });
     return (
         <Sider
+            collapsedWidth={sider.collapsedWidth}
+            breakpoint={'sm'}
             id={styles.sider}
-            width={208}
-            collapsedWidth={64}
+            width={sider.width}
             trigger={null}
             collapsible
             collapsed={collapsed}
+            onBreakpoint={(breack) => {
+                if (breack) {
+                    setSider({ width: 106, collapsedWidth: 0 });
+                } else {
+                    setSider({ width: 208, collapsedWidth: 64 });
+                }
+            }}
         >
             <div className={styles.sider__logo}>
                 {collapsed ? (
@@ -82,15 +91,16 @@ export const MainPageSider: React.FC = () => {
             <div id={styles.sider__unfold}>
                 <Divider className={styles.sider__divider} />
                 <div
+                    data-test-id='sider-switch'
                     className={styles.sider__exiteWrapper}
                     onClick={() => setCollapsed(!collapsed)}
                 >
-                    <img src={exiteIcon} alt='exite ' />
+                    <img src={exiteIcon} alt='exite ' className={styles.exit__icon} />
                     {collapsed ? '' : <span>Выход</span>}
                 </div>
             </div>
             <div
-                data-test-id='sider-switch'
+                data-test-id='sider-switch-mobile'
                 className={styles.sider__rightUnfold}
                 onClick={() => setCollapsed(!collapsed)}
             >

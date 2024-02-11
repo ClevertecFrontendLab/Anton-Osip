@@ -7,12 +7,21 @@ import { AndroidFilled, AppleFilled } from '@ant-design/icons';
 export const MainPageFooter: React.FC = () => {
     return (
         <Row id={styles.reviews}>
-            <Col span={4}>
+            <Col
+                xl={{ span: 4 }}
+                sm={{ span: 7 }}
+                xs={{ span: 24 }}
+                className={styles.reviews__link_wrapper}
+            >
                 <Link to='#' className={styles.reviews__link}>
                     Смотреть отзывы
                 </Link>
             </Col>
-            <Col span={5} offset={15}>
+            <Col
+                xl={{ span: 5, offset: 15 }}
+                sm={{ span: 10, offset: 7 }}
+                xs={{ span: 24, offset: 0 }}
+            >
                 <div className={styles.card}>
                     <Link className={styles.card__dounload} to='#'>
                         Скачать на телефон

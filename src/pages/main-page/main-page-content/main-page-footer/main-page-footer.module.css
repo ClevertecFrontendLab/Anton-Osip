@@ -56,3 +56,37 @@
     padding: 7px 0;
     width: 100%;
 }
+@media (max-width: 1012px) {
+    #reviews .reviews__link {
+        margin-left: 19px;
+    }
+    .card {
+        margin-right: 5px;
+    }
+}
+@media (max-width: 575px) {
+    #reviews {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    #reviews .reviews__link_wrapper {
+        order: 2;
+    }
+
+    #reviews > div {
+        width: 100%;
+    }
+    .card {
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 24px;
+        text-align: center;
+    }
+    #reviews .reviews__link {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

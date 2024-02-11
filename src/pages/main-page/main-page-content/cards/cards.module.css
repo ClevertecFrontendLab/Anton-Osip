@@ -20,15 +20,17 @@
     word-spacing: 4px;
 }
 #cards .contentCards__wrapper {
-    flex-wrap: nowrap;
-    max-width: calc(752px - 16px - 16px);
+    max-width: 752px;
     width: 100%;
     margin-top: 16px;
-    gap: 16px;
     margin-bottom: 180px;
 }
 #cards .contentCards__wrapper .contentCard {
     padding: 0;
+    width: 100%;
+}
+#cards .contentCards__wrapper > div > div {
+    width: 100%;
 }
 #cards .contentCardAction__title {
     font-weight: 400;
@@ -62,4 +64,41 @@
 }
 #cards .contentCardAction__icon.contentCardAction__icon_calendar path {
     fill: var(--primary-light-6);
+}
+@media (max-width: 1012px) {
+    #cards .contentCards__wrapper {
+        margin-bottom: 261px;
+    }
+    #cards .contentCards__wrapper .contentCard {
+        padding: 0;
+    }
+    #cards .contentCardAction__title {
+        max-width: 140px;
+        text-align: left;
+        letter-spacing: 1px;
+        padding: 12px 21px;
+    }
+}
+@media (max-width: 575px) {
+    .contentCard {
+        padding: 14px 16px;
+    }
+    #cards .contentCard__title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        color: var(--character-light-title-85);
+        margin-bottom: 0;
+        word-spacing: 4px;
+    }
+    #cards .contentCards__wrapper > div {
+        flex-direction: column;
+    }
+    #cards .contentCardAction__title {
+        max-width: 100%;
+        text-align: center;
+    }
+    #cards .contentCards__wrapper {
+        margin-bottom: 24px;
+    }
 }

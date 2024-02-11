@@ -1,7 +1,7 @@
 #header {
     width: 100%;
     height: auto;
-    background-color: #fff;
+    background: var(--primary-light-1);
     padding: 16px 24px;
 }
 #header .header__breadcrumb {
@@ -39,4 +39,40 @@
     line-height: 130%;
     word-spacing: 4px;
     color: var(--character-light-title-85);
+}
+
+@media (max-width: 1053px) {
+    #header {
+        padding: 16px 24px 20px;
+    }
+    #header .header__breadcrumb {
+        padding-left: 1px;
+    }
+    #header .header__title {
+        font-weight: 500;
+        font-size: 24px;
+        word-spacing: 0;
+    }
+}
+@media (max-width: 644px) {
+    #header .header__breadcrumb {
+        margin-bottom: 2px;
+    }
+    #header .header__title {
+        font-size: 20px;
+    }
+    #header .header__settings {
+        border: 1px solid var(--character-light-border);
+        border-radius: 100px;
+        padding: 4px 10px;
+        width: 32px;
+        height: 32px;
+        box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+        background: var(--character-light-primary-inverse);
+        overflow: hidden;
+        padding-top: 5px;
+        padding-left: 8px;
+        top: -2px;
+        right: 0;
+    }
 }
