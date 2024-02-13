@@ -1,23 +1,18 @@
-.contentCard {
+#contentCard {
     max-width: 752px;
-    width: 100%;
-    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
-    background: var(--character-light-primary-inverse);
-    border-radius: 2px;
-    padding: 28px 24px 24px;
+    margin-bottom: 24px;
+
     font-family: var(--font-family);
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
     color: var(--primary-light-9);
+
+    background: var(--character-light-primary-inverse);
+    border-radius: 2px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
 }
-.contentCardAction {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 130%;
-    word-spacing: 4px;
-    margin-bottom: 24px;
-}
+
 .contentCardAction__text {
     margin-bottom: 0;
 }
@@ -26,26 +21,12 @@
     margin: 0;
     padding: 0;
 }
-@media (max-width: 835px) {
-    .contentCard {
-        padding-top: 25px;
-    }
-}
 
 @media (max-width: 575px) {
-    .contentCard {
-        padding: 21px 16px;
+    #contentCard {
+        letter-spacing: 0.35px;
     }
-    .contentCardAction {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 130%;
-        word-spacing: 4px;
-        margin-bottom: 24px;
-    }
-
-    .contentCardAction__list > li {
-        letter-spacing: 1px;
-        word-spacing: -2px;
+    #contentCard div {
+        padding: 15px 30px 19px 16px;
     }
 }
