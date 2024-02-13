@@ -99,7 +99,7 @@
 
 @media (max-width: 575px) {
     #cards {
-        margin-bottom: 24px;
+        margin-bottom: 22px;
     }
     #cards .contentCard div {
         padding: 14px 20px 17px 16px;

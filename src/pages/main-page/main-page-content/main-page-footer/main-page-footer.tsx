@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './main-page-footer.module.css';
-import { Col, Divider, Row } from 'antd';
+import { Card, Col, Divider, Row } from 'antd';
 import { Link } from 'react-router-dom';
 import { AndroidFilled, AppleFilled } from '@ant-design/icons';
 
@@ -22,7 +22,7 @@ export const MainPageFooter: React.FC = () => {
                 sm={{ span: 10, offset: 7 }}
                 xs={{ span: 24, offset: 0 }}
             >
-                <div className={styles.card}>
+                <Card className={styles.card}>
                     <Link className={styles.card__dounload} to='#'>
                         Скачать на телефон
                     </Link>
@@ -43,7 +43,7 @@ export const MainPageFooter: React.FC = () => {
                             </Link>
                         </Col>
                     </Row>
-                </div>
+                </Card>
             </Col>
         </Row>
     );
