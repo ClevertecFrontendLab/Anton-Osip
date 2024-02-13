@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './card-legecy.module.css';
 import { Card } from 'antd';
-import classNames from 'classnames';
 
 interface IListItem {
     id: string;
