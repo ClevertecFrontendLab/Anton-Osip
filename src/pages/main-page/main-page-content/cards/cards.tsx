@@ -1,63 +1,80 @@
 import React from 'react';
 import styles from './cards.module.css';
-import { Col, Divider, Row, Space } from 'antd';
+import { Divider, Row, Space } from 'antd';
 import Title from 'antd/lib/typography/Title';
 import { Link } from 'react-router-dom';
 import { CalendarTwoTone, HeartFilled, IdcardOutlined } from '@ant-design/icons';
+import Card from 'antd/lib/card/Card';
+import classNames from 'classnames';
+
+interface IContentCard {
+    id: string;
+    title: string;
+    icon: JSX.Element;
+    text: string;
+}
+
+const contentCards: IContentCard[] = [
+    {
+        id: 'contentCard1',
+        title: 'Расписать тренировки',
+        icon: <HeartFilled size={11} className={styles.contentCardAction__icon} />,
+        text: ' Тренировки',
+    },
+    {
+        id: 'contentCard2',
+        title: 'Назначить календарь',
+        icon: (
+            <CalendarTwoTone
+                size={11}
+                className={classNames(
+                    `${styles.contentCardAction__icon}`,
+                    `${styles.contentCardAction__icon_calendar}`,
+                )}
+            />
+        ),
+        text: ' Календарь',
+    },
+    {
+        id: 'contentCard3',
+        title: 'Заполнить профиль',
+        icon: (
+            <IdcardOutlined
+                size={11}
+                className={classNames(
+                    `${styles.contentCardAction__icon}`,
+                    `${styles.contentCardAction__icon_Idcard}`,
+                )}
+            />
+        ),
+
+        text: '  Профиль',
+    },
+];
 
 export const Cards: React.FC = () => {
     return (
         <div id={styles.cards}>
-            <div className={styles.contentCard}>
+            <Card className={styles.contentCard}>
                 <Title level={2} className={styles.contentCard__title}>
                     CleverFit — это не просто приложение, а твой личный помощник в мире фитнеса. Не
                     откладывай на завтра — начни тренироваться уже сегодня!
                 </Title>
-            </div>
+            </Card>
             <Row className={styles.contentCards__wrapper}>
-                <Space size={16} style={{ justifyContent: 'space-between', width: '100%' }}>
-                    <Col span={24}>
-                        <div className={styles.contentCard}>
+                <Space style={{ justifyContent: 'space-between', width: '100%' }}>
+                    {contentCards.map((card: IContentCard) => (
+                        <Card className={styles.card}>
                             <Title level={4} className={styles.contentCardAction__title}>
-                                Расписать тренировки
+                                {card.title}
                             </Title>
                             <Divider className={styles.contentCardAction__line} />
                             <Link to='#' className={styles.contentCardAction__link}>
-                                <HeartFilled size={11} className={styles.contentCardAction__icon} />
-                                Тренировки
+                                {card.icon}
+                                {card.text}
                             </Link>
-                        </div>
-                    </Col>
-                    <Col span={24}>
-                        <div className={styles.contentCard}>
-                            <Title level={4} className={styles.contentCardAction__title}>
-                                Назначить календарь
-                            </Title>
-                            <Divider className={styles.contentCardAction__line} />
-                            <Link to='#' className={styles.contentCardAction__link}>
-                                <CalendarTwoTone
-                                    size={11}
-                                    className={`${styles.contentCardAction__icon} ${styles.contentCardAction__icon_calendar}`}
-                                />
-                                Календарь
-                            </Link>
-                        </div>
-                    </Col>
-                    <Col span={24}>
-                        <div className={styles.contentCard}>
-                            <Title level={4} className={styles.contentCardAction__title}>
-                                Заполнить профиль
-                            </Title>
-                            <Divider className={styles.contentCardAction__line} />
-                            <Link to='#' className={styles.contentCardAction__link}>
-                                <IdcardOutlined
-                                    size={11}
-                                    className={`${styles.contentCardAction__icon} ${styles.contentCardAction__icon_Idcard}`}
-                                />
-                                Профиль
-                            </Link>
-                        </div>
-                    </Col>
+                        </Card>
+                    ))}
                 </Space>
             </Row>
         </div>
