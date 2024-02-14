@@ -1,0 +1,120 @@
+#cards {
+    margin-bottom: 180px;
+}
+
+#cards .contentCard {
+    max-width: 752px;
+    margin-bottom: 14px;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--primary-light-9);
+
+    background: var(--character-light-primary-inverse);
+    border-radius: 2px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+}
+
+#cards .contentCard__title {
+    margin-bottom: 0;
+
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    color: var(--character-light-title-85);
+    letter-spacing: 0.35px;
+}
+
+.contentCards__wrapper {
+    max-width: 752px;
+}
+
+#cards .contentCards__wrapper > div {
+    gap: 16px;
+}
+
+#cards .contentCards__wrapper > div > div {
+    width: 100%;
+}
+
+#cards .card > div {
+    padding: 0;
+}
+
+#cards .contentCardAction__title {
+    margin: 0;
+    padding: 12px 0;
+    text-align: center;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.7px;
+    color: var(--character-light-title-85);
+}
+
+#cards .contentCardAction__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 19px 0;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: var(--primary-light-6);
+}
+
+#cards .contentCardAction__link > span {
+    width: auto;
+}
+
+#cards .contentCardAction__line {
+    margin: 0;
+}
+
+#cards .contentCardAction__icon {
+    margin-right: 13px;
+}
+
+#cards .contentCardAction__icon.contentCardAction__icon_Idcard path,
+#cards .contentCardAction__icon.contentCardAction__icon_calendar path {
+    fill: var(--primary-light-6);
+}
+
+@media (max-width: 1012px) {
+    #cards {
+        margin-bottom: 261px;
+    }
+    #cards .contentCardAction__title {
+        text-align: left;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+@media (max-width: 575px) {
+    #cards {
+        margin-bottom: 22px;
+    }
+    #cards .contentCard div {
+        padding: 14px 20px 17px 16px;
+    }
+
+    #cards .contentCards__wrapper > div {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    #cards .contentCardAction__title {
+        text-align: center;
+    }
+
+    #cards .contentCardAction__link {
+        padding: 19px 0 17px;
+    }
+}
