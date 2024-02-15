@@ -1,6 +1,7 @@
 #contentCard {
     max-width: 752px;
     margin-bottom: 24px;
+    padding-right: 24px;
 
     font-family: var(--font-family);
     font-weight: 400;
@@ -21,10 +22,16 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 836px) {
+    #contentCard {
+        padding-right: 0;
+        line-height: 131%;
+    }
+}
 
 @media (max-width: 575px) {
     #contentCard {
-        letter-spacing: 0.35px;
+        line-height: 130%;
     }
     #contentCard div {
         padding: 15px 30px 19px 16px;
