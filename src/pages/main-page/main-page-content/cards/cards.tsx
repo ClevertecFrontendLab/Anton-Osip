@@ -57,12 +57,12 @@ export const Cards: React.FC = () => {
         <div id={styles.cards}>
             <Card className={styles.contentCard}>
                 <Title level={2} className={styles.contentCard__title}>
-                    CleverFit — это не просто приложение, а твой личный помощник в мире фитнеса. Не
-                    откладывай на завтра — начни тренироваться уже сегодня!
+                    CleverFit — это не просто приложение, а твой личный помощник в&nbsp;мире
+                    фитнеса. Не откладывай на завтра — начни&nbsp;тренироваться уже сегодня!
                 </Title>
             </Card>
             <Row className={styles.contentCards__wrapper}>
-                <Space style={{ justifyContent: 'space-between', width: '100%' }}>
+                <Space size={16} style={{ justifyContent: 'space-between', width: '100%' }}>
                     {contentCards.map((card: IContentCard) => (
                         <Card className={styles.card}>
                             <Title level={4} className={styles.contentCardAction__title}>
