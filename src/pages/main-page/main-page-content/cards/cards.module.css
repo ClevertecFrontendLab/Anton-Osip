@@ -1,5 +1,5 @@
 #cards {
-    margin-bottom: 180px;
+    margin-bottom: 183px;
 }
 
 #cards .contentCard {
@@ -87,7 +87,7 @@
 
 @media (max-width: 868px) {
     #cards {
-        margin-bottom: 261px;
+        margin-bottom: 262px;
     }
     #cards .contentCardAction__title {
         text-align: left;
@@ -96,9 +96,9 @@
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     #cards {
-        margin-bottom: 22px;
+        margin-bottom: 27px;
     }
     #cards .contentCard div {
         padding: 14px 20px 17px 16px;

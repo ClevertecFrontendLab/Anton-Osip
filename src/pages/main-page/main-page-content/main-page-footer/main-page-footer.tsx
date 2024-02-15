@@ -9,7 +9,7 @@ export const MainPageFooter: React.FC = () => {
         <Row id={styles.reviews}>
             <Col
                 xl={{ span: 4 }}
-                sm={{ span: 7 }}
+                sm={{ span: 9 }}
                 xs={{ span: 24 }}
                 className={styles.reviews__link_wrapper}
             >
@@ -19,7 +19,7 @@ export const MainPageFooter: React.FC = () => {
             </Col>
             <Col
                 xl={{ span: 5, offset: 15 }}
-                sm={{ span: 10, offset: 7 }}
+                sm={{ span: 14, offset: 1 }}
                 xs={{ span: 24, offset: 0 }}
             >
                 <Card className={styles.card}>
