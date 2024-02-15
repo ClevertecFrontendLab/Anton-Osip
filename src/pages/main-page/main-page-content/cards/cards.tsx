@@ -64,7 +64,7 @@ export const Cards: React.FC = () => {
             <Row className={styles.contentCards__wrapper}>
                 <Space size={16} style={{ justifyContent: 'space-between', width: '100%' }}>
                     {contentCards.map((card: IContentCard) => (
-                        <Card className={styles.card}>
+                        <Card key={card.id} className={styles.card}>
                             <Title level={4} className={styles.contentCardAction__title}>
                                 {card.title}
                             </Title>

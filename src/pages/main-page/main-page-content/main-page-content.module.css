@@ -2,8 +2,11 @@
     padding: 24px 24px 42px;
 }
 
-@media (max-width: 360px) {
+@media (max-width: 365px) {
     #content {
         padding: 24px 15px 57px;
+    }
+    #content.open {
+        padding: 24px 24px 57px 0;
     }
 }

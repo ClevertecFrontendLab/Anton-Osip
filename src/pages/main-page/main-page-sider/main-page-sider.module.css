@@ -11,7 +11,7 @@
 }
 
 .sider__logo {
-    margin-bottom: 60px;
+    margin-bottom: 58px;
 }
 
 .sider__logo_max {
@@ -20,8 +20,8 @@
 }
 
 .sider__logo_min {
-    height: 33px;
-    padding-left: 16px;
+    height: 30px;
+    padding-left: 17px;
 }
 
 #sider__menu {
@@ -30,23 +30,21 @@
     gap: 5px;
 }
 
-#sider__menu .sider__menuItem {
-    padding: 12px 0;
+#sider__menu li {
     padding-left: 17px !important;
-
+}
+#sider__menu li > span {
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
     color: var(--character-light-title-85);
-    letter-spacing: 1px;
 }
-
-#sider__menu .sider__menuItem_collapsed {
-    padding-left: 24px !important;
-}
-
-#sider__menu .sider__menuItem svg path {
+#sider__menu li > .menu__icon > svg {
     fill: var(--primary-light-9);
+}
+#sider__menu.sider__menu_cloused li {
+    padding-left: 25px !important;
 }
 
 #sider__unfold {
@@ -68,12 +66,12 @@
 .sider__exiteWrapper span {
     margin-left: 25px;
 
+    font-family: var(--font-family);
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
     text-align: center;
     color: var(--character-light-title-85);
-    letter-spacing: 1px;
 }
 
 .sider__rightUnfold {
@@ -94,6 +92,7 @@
     top: 17px;
     left: -17px;
 }
+
 @media (max-width: 575.5px) {
     #sider {
         position: fixed;
@@ -110,10 +109,6 @@
         margin-bottom: 28px;
     }
 
-    #sider__menu .sider__menuItem svg {
-        display: none;
-    }
-
     .sider__logo_max {
         height: 19px;
         padding-left: 16px;
@@ -127,16 +122,16 @@
         gap: 0;
     }
 
-    #sider__menu .sider__menuItem {
+    #sider__menu li > .menu__icon {
+        display: none;
+    }
+
+    #sider__menu li {
         padding-left: 0 !important;
     }
 
-    #sider__menu span {
-        margin-left: -3px;
-    }
-
     #sider__unfold {
-        bottom: 32px;
+        bottom: 0;
     }
 
     .exit__icon {

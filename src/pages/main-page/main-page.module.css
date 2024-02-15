@@ -1,10 +1,10 @@
 #mainPage {
     min-height: 100lvh;
-    background: #fff url('../../assets/mainPage_bg.jpg') no-repeat center/cover;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     flex-direction: row;
+    background: #fff url('../../assets/mainPage_bg.jpg') no-repeat center/cover;
 }
 #mainPage .mainPageContent {
     background-color: transparent;

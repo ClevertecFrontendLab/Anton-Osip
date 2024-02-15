@@ -13,18 +13,51 @@ import {
 import Logo from '../../../assets/logo.svg';
 import LogoMin from '../../../assets/logo_min.svg';
 import exiteIcon from '../../../assets/exitIcon.svg';
+import classNames from 'classnames';
 
 interface IUseStateSider {
     width: number;
     collapsedWidth: number;
 }
 
-export const MainPageSider: React.FC = () => {
-    const [collapsed, setCollapsed] = useState<boolean>(false);
+interface ISiderProps {
+    collapsed: boolean;
+    setCollapsed: (a: boolean) => void;
+}
+interface IMenuItem {
+    key: string;
+    icon: JSX.Element;
+    label: string;
+}
+
+export const MainPageSider = ({ collapsed, setCollapsed }: ISiderProps) => {
     const [sider, setSider] = useState<IUseStateSider>({
         width: 208,
         collapsedWidth: 64,
     });
+    const menuItems: IMenuItem[] = [
+        {
+            key: 'calendarIcon',
+            icon: <CalendarOutlined className={styles.menu__icon} />,
+            label: 'Календарь',
+        },
+        {
+            key: 'heartFilledIcon',
+            icon: <HeartFilled className={styles.menu__icon} />,
+            label: 'Тренировки',
+        },
+        {
+            key: 'trophyIcon',
+            icon: <TrophyFilled className={styles.menu__icon} />,
+            label: 'Достижения',
+        },
+        {
+            key: 'IdcardIcon',
+            icon: <IdcardOutlined className={styles.menu__icon} />,
+            label: 'Профиль',
+        },
+    ];
+
     return (
         <Sider
             collapsedWidth={sider.collapsedWidth}
@@ -50,59 +83,16 @@ export const MainPageSider: React.FC = () => {
                 )}
             </div>
 
-            <Menu id={styles.sider__menu} mode='inline'>
-                <Menu.Item
-                    className={
-                        collapsed
-                            ? `${styles.sider__menuItem} ${styles.sider__menuItem_collapsed}`
-                            : `${styles.sider__menuItem}`
-                    }
-                    key='calendarIcon'
-                    icon={<CalendarOutlined />}
-                >
-                    {collapsed ? '' : 'Календарь'}
-                </Menu.Item>
-                <Menu.Item
-                    className={
-                        collapsed
-                            ? `${styles.sider__menuItem} ${styles.sider__menuItem_collapsed}`
-                            : `${styles.sider__menuItem}`
-                    }
-                    key='heartFilledIcon'
-                    icon={<HeartFilled />}
-                >
-                    {collapsed ? '' : 'Тренировки'}
-                </Menu.Item>
-                <Menu.Item
-                    className={
-                        collapsed
-                            ? `${styles.sider__menuItem} ${styles.sider__menuItem_collapsed}`
-                            : `${styles.sider__menuItem}`
-                    }
-                    key='trophyIcon'
-                    icon={<TrophyFilled />}
-                >
-                    {collapsed ? '' : 'Достижения'}
-                </Menu.Item>
-                <Menu.Item
-                    className={
-                        collapsed
-                            ? `${styles.sider__menuItem} ${styles.sider__menuItem_collapsed}`
-                            : `${styles.sider__menuItem}`
-                    }
-                    key='IdcardIcon'
-                    icon={<IdcardOutlined />}
-                >
-                    {collapsed ? '' : 'Профиль'}
-                </Menu.Item>
-            </Menu>
+            <Menu
+                id={styles.sider__menu}
+                className={collapsed ? `${styles.sider__menu_cloused}` : ``}
+                mode='inline'
+                items={menuItems}
+            />
+
             <div id={styles.sider__unfold}>
                 <Divider className={styles.sider__divider} />
-                <div
-                    data-test-id='sider-switch'
-                    className={styles.sider__exiteWrapper}
-                    onClick={() => setCollapsed(!collapsed)}
-                >
+                <div data-test-id='sider-switch' className={styles.sider__exiteWrapper}>
                     <img src={exiteIcon} alt='exite ' className={styles.exit__icon} />
                     {collapsed ? '' : <span>Выход</span>}
                 </div>
