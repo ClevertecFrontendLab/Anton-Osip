@@ -1,0 +1,84 @@
+.main {
+    max-width: 1440px;
+    width: 100%;
+    min-height: 100lvh;
+    margin: 0 auto;
+    background: url(../../assets/auth-bg.jpg) no-repeat center/cover;
+}
+
+.popup {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgb(121, 156, 213, 0.5);
+    overflow: hidden;
+    padding: 16px;
+}
+
+.popup__wrapper {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+
+.popup__inner {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.popup__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 2px;
+    padding: 50px 85px;
+    max-width: 539px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+    background: var(--character-light-primary-inverse);
+}
+
+.auth__logo {
+    width: 309px;
+    height: 78px;
+    margin-bottom: 48px;
+}
+
+#tabs {
+    width: 100%;
+}
+#tabs > div:first-child {
+    margin-bottom: 24px;
+}
+#tabs > div:first-child > div > div {
+    width: 100%;
+    justify-content: center;
+}
+#tabs > div:first-child > div > div > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--character-light-title-85);
+}
+
+@media (max-width: 600px) {
+    .popup__content {
+        padding: 32px 16px;
+    }
+    .auth__logo {
+        width: 203px;
+        height: 50px;
+        margin-bottom: 23px;
+    }
+}

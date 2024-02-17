@@ -13,7 +13,6 @@ import {
 import Logo from '../../../assets/logo.svg';
 import LogoMin from '../../../assets/logo_min.svg';
 import exiteIcon from '../../../assets/exitIcon.svg';
-import classNames from 'classnames';
 
 interface IUseStateSider {
     width: number;
